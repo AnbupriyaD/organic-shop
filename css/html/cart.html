@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+  // Get references to the radio buttons and the card details section
+  const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+  const cardDetailsSection = document.getElementById("card-details");
+
+  // Add an event listener to each payment method radio button
+  paymentMethods.forEach(function(method) {
+    method.addEventListener("change", function() {
+      // Check which payment method is selected
+      if (this.value === "Card") {
+        // Show the card details section
+        cardDetailsSection.classList.remove("hidden");
+      } else {
+        // Hide the card details section if it's not the Card option
+        cardDetailsSection.classList.add("hidden");
+      }
+    });
+  });
+});
+
+    </script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.style.opacity = '1';
+      } else {
+        scrollToTopBtn.style.opacity = '0';
+      }
+    });
+
+    scrollToTopBtn.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+    </script>
+    <script type="text/javascript">
+        function toggleAccordion(element) {
+  const content = element.nextElementSibling;
+  const svg = element.querySelector('svg');
+
+  // Check if the content is already open
+  if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+    // Close the content
+    content.style.maxHeight = '0px';
+    svg.style.transform = 'rotate(0deg)';
+  } else {
+    // Close all open accordion items
+    document.querySelectorAll('.accordion-content').forEach((item) => {
+      item.style.maxHeight = '0px';
+    });
+    document.querySelectorAll('.accordion-item svg').forEach((icon) => {
+      icon.style.transform = 'rotate(0deg)';
+    });
+
+    // Open the clicked accordion content
+    content.style.maxHeight = content.scrollHeight + 'px';
+    svg.style.transform = 'rotate(180deg)';
+  }
+}
+    </script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <section class="py-20 bg-gray-100 ">  <div class="container mx-auto px-4">    <div class="p-8 lg:p-20 bg-white">      <h2 class="mb-20 text-5xl font-bold font-heading">Your cart</h2>      <div class="flex flex-wrap items-center -mx-4">        <div class="w-full xl:w-8/12 mb-8 xl:mb-0 px-4">          <div class="hidden lg:flex w-full">            <div class="w-full lg:w-3/6">              <h4 class="mb-6 font-bold font-heading text-gray-500">Description</h4>            </div>            <div class="w-full lg:w-1/6">              <h4 class="mb-6 font-bold font-heading text-gray-500">Price</h4>            </div>            <div class="w-full lg:w-1/6 text-center">              <h4 class="mb-6 font-bold font-heading text-gray-500">Quantity</h4>            </div>            <div class="w-full lg:w-1/6 text-right">              <h4 class="mb-6 font-bold font-heading text-gray-500">Subtotal</h4>            </div>          </div>          <div class="mb-12 py-6 border-t border-b border-gray-200">            <div class="flex flex-wrap items-center -mx-4 mb-6 md:mb-3">              <div class="w-full md:w-4/6 lg:w-6/12 px-4 mb-6 md:mb-0">                <div class="flex -mx-4 flex-wrap items-center">                  <div class="w-full md:w-1/3 px-4 mb-3">                    <div class="flex items-center justify-center w-full md:w-24 h-32 bg-gray-100">                      <img class="h-full object-contain" src="https://static.shuffle.dev/uploads/files/62/620052fb40cf2dae99ea1b5740748bb3650d699b/millet7.avif" alt="">                    </div>                  </div>                  <div class="w-2/3 px-4">                    <h3 class="mb-2 text-xl font-bold font-heading">Finger Millet</h3>                    <p class="text-gray-500">Maecenas 0.7 commodo sit</p>                  </div>                </div>              </div>              <div class="hidden lg:block lg:w-2/12 px-4">                <p class="text-lg text-blue-500 font-bold font-heading">Rs.50</p>                <span class="text-xs text-gray-500 line-through">Rs.60</span>              </div>              <div class="w-auto md:w-1/6 lg:w-2/12 px-4">                <div class="inline-flex items-center px-4 font-semibold font-heading text-gray-500 border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" x-data="{ quantity: 1 }">                  <button x-on:click="quantity &gt; 1 ? quantity-- : quantity" class="py-2 hover:text-gray-700">                    <svg width="12" height="2" viewbox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>                  </button>                  <input class="w-12 m-0 px-2 py-4 text-center md:text-right border-0 focus:ring-transparent focus:outline-none rounded-md" type="number" x-model="quantity" placeholder="1">                  <button x-on:click="quantity++" class="py-2 hover:text-gray-700">                    <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>                  </button>                </div>              </div>              <div class="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">                <p class="text-lg text-blue-500 font-bold font-heading">Rs.100</p>              </div>            </div>            <div class="flex flex-wrap items-center -mx-4">              <div class="w-full md:w-4/6 lg:w-6/12 px-4 mb-6 md:mb-0">                <div class="flex -mx-4 flex-wrap items-center">                  <div class="w-full md:w-1/3 px-4 mb-3">                    <div class="flex items-center justify-center w-full md:w-24 h-32 bg-gray-100">                      <img class="h-full object-contain" src="https://static.shuffle.dev/uploads/files/62/620052fb40cf2dae99ea1b5740748bb3650d699b/ravaladdu.jpg" alt="">                    </div>                  </div>                  <div class="w-full md:w-2/3 px-4">                    <h3 class="mb-2 text-xl font-bold font-heading">Rava laddu</h3>                    <p class="text-gray-500">Lorem ipsum dolor L</p>                  </div>                </div>              </div>              <div class="hidden lg:block lg:w-2/12 px-4">                <p class="text-lg text-blue-500 font-bold font-heading">Rs.500</p>                <span class="text-xs text-gray-500 line-through">Rs.600</span>              </div>              <div class="w-auto md:w-1/6 lg:w-2/12 px-4">                <div class="inline-flex items-center px-4 font-semibold font-heading text-gray-500 border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" x-data="{ quantity: 1 }">                  <button x-on:click="quantity &gt; 1 ? quantity-- : quantity" class="py-2 hover:text-gray-700">                    <svg width="12" height="2" viewbox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="12" width="2" height="12" transform="rotate(90 12 0)" fill="currentColor"></rect></g></svg>                  </button>                  <input class="w-12 m-0 px-2 py-4 text-center md:text-right border-0 focus:ring-transparent focus:outline-none rounded-md" type="number" x-model="quantity" placeholder="1">                  <button x-on:click="quantity++" class="py-2 hover:text-gray-700">                    <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.35"><rect x="5" width="2" height="12" fill="currentColor"></rect><rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="currentColor"></rect></g></svg>                  </button>                </div>              </div>              <div class="w-auto md:w-1/6 lg:w-2/12 px-4 text-right">                <p class="text-lg text-blue-500 font-bold font-heading">Rs.500</p>              </div>            </div>          </div>          <div class="flex flex-wrap items-center lg:-mb-4">            <span class="mr-12 mb-4 font-medium">Apply discount code:</span>            <input class="flex-1 md:flex-none mr-6 sm:mr-0 md:mr-6 mb-4 px-8 py-4 placeholder-gray-800 font-bold font-heading border rounded-md" type="text" placeholder="SUMMER30X">            <a class="flex-1 md:flex-none inline-block mb-4 px-8 py-4 text-center text-white font-bold font-heading uppercase bg-gray-800 hover:bg-gray-700 rounded-md" href="#">Apply</a>          </div>        </div>        <div class="w-full xl:w-4/12 px-4">          <div class="p-6 md:p-12 bg-green">            <h2 class="mb-6 text-4xl font-bold font-heading text-white">Cart totals</h2>            <div class="flex mb-8 items-center justify-between pb-5 border-b border-green-100">              <span class="text-xl font-bold font-heading text-white">Subtotal</span>              <span class="text-xl font-bold font-heading text-white">Rs.600</span>            </div>            <div class="flex mb-2 justify-between items-center">              <span class="text-xl font-bold font-heading text-white">Shipping</span>              <span class="text-xl font-bold font-heading text-white">Rs.50</span>            </div>            <div class="flex mb-10 justify-between items-center"></div>            <div class="flex mb-10 justify-between items-center">              <span class="text-xl font-bold font-heading text-white">Order total</span>              <span class="text-xl font-bold font-heading text-white">Rs.650</span>            </div>            <a class="block w-full py-4 bg-orange-300 hover:bg-orange-400 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200" href="#">Go to Checkout</a>          </div>        </div>      </div>    </div>  </div>  <!-- Scroll to Top Button -->  <button id="scrollToTopBtn" title="Go to top" style="                                                       position: fixed;                                                       bottom: 20px;                                                       right: 20px;                                                       z-index: 9999;                                                       background-color: #333;                                                       color: white;                                                       border: none;                                                       outline: none;                                                       width: 50px;                                                       height: 50px;                                                       border-radius: 50%;                                                       text-align: center;                                                       font-size: 24px;                                                       cursor: pointer;                                                       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);                                                       opacity: 0;                                                       transition: opacity 0.3s, transform 0.3s;                                                       ">↑</button></section>
+    </div>
+</body>
+</html>
+

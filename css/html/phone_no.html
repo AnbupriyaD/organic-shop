@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+  // Get references to the radio buttons and the card details section
+  const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+  const cardDetailsSection = document.getElementById("card-details");
+
+  // Add an event listener to each payment method radio button
+  paymentMethods.forEach(function(method) {
+    method.addEventListener("change", function() {
+      // Check which payment method is selected
+      if (this.value === "Card") {
+        // Show the card details section
+        cardDetailsSection.classList.remove("hidden");
+      } else {
+        // Hide the card details section if it's not the Card option
+        cardDetailsSection.classList.add("hidden");
+      }
+    });
+  });
+});
+
+    </script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 100) {
+        scrollToTopBtn.style.opacity = '1';
+      } else {
+        scrollToTopBtn.style.opacity = '0';
+      }
+    });
+
+    scrollToTopBtn.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+    </script>
+    <script type="text/javascript">
+        function toggleAccordion(element) {
+  const content = element.nextElementSibling;
+  const svg = element.querySelector('svg');
+
+  // Check if the content is already open
+  if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+    // Close the content
+    content.style.maxHeight = '0px';
+    svg.style.transform = 'rotate(0deg)';
+  } else {
+    // Close all open accordion items
+    document.querySelectorAll('.accordion-content').forEach((item) => {
+      item.style.maxHeight = '0px';
+    });
+    document.querySelectorAll('.accordion-item svg').forEach((icon) => {
+      icon.style.transform = 'rotate(0deg)';
+    });
+
+    // Open the clicked accordion content
+    content.style.maxHeight = content.scrollHeight + 'px';
+    svg.style.transform = 'rotate(180deg)';
+  }
+}
+    </script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+                
+      <section class="py-20 bg-gray-100 overflow-x-hidden bs-section-dragged ">  <div class="relative container px-4 mx-auto">    <div class="absolute inset-0 bg-blue-200 my-24 -ml-4"></div>    <div class="relative flex flex-wrap bg-white">      <div class="w-full px-4">        <div class="lg:max-w-3xl mx-auto py-20 px-4 md:px-10 lg:px-20">          <a class="flex justify-center inline-block mb-14 text-3xl font-bold font-heading" href="#">            <img class="h-20 w-20" src="images/download.png" alt="" width="auto">          </a>          <h3 class="mb-8 text-center md:text-5xl font-bold font-heading">Detail to Communicate</h3>          <p class="mb-10 font-semibold font-heading">Please, provide your valuable details</p>          <form class="flex flex-wrap -mx-4" action="">            <div class="w-full md:w-1/2 px-4 mb-8 md:mb-12">              <label for="">                <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Your Email</h4>                <input class="p-5 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="email">              </label>            </div>            <div class="w-full md:w-1/2 px-4 mb-12">              <label for="">                <h4 class="mb-5 text-gray-400 uppercase font-bold font-heading">Mobile No.</h4>                <input class="p-5 w-full border border-gray-200 focus:ring-blue-300 focus:border-blue-300 rounded-md" type="mobile.no">              </label>            </div>            <div class="w-full px-4 mb-12" for="">              <label class="flex" for="">                <input class="mr-4 mt-1" type="checkbox">                <span class="text-sm">Keep me posted about sales and offers</span>              </label>            </div>            <div class="w-full px-4 flex justify-center">              <button class="bg-green hover:bg-green-300 text-white font-bold font-heading py-5 px-8 rounded-md uppercase">Save and Continue</button>            </div>          </form>        </div>      </div>    </div>  </div></section>
+    </div>
+</body>
+</html>
+
