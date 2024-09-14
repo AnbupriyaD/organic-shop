@@ -1,0 +1,350 @@
+.bg-green,
+  .inset-0,
+    .navlink::after,
+      .product-card img {
+        transition-behavior: normal
+        }
+      .bg-green{
+        background-color:#32cd32;
+        }
+      .navlink{
+  font-weight: 800;
+  font-size:1.1rem;
+  padding:10px 10px;
+  text-decoration: none;
+}
+.navitem{
+  position:relative;
+}
+.navlink::after{
+  content:"";
+  height:4px;
+  width:0%;
+  background-color:#32cd32;
+position:absolute;
+bottom:-10px;
+left:10px;
+transition:0.5s;
+}
+.navlink:hover::after{
+  width:90%;
+}
+ .inset-0 {
+          bottom: 0;
+          transition: .7s
+            }
+          .product-card img {
+            transition: transform .5s ease-in-out
+            }
+          .zoom-effect-container img {
+            transition-behavior: normal;
+            transition: transform .3s
+            }
+          .product-card {
+            bottom: -20px;
+            transition-behavior: normal,normal;
+            transition: transform .4s ease-in-out,box-shadow .4s;
+            will-change: transform,box-shadow;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: rgba(0,0,0,.1) 0 4px 20px
+            }
+          .flex-wrap,
+            img {
+              transition-behavior: normal,normal;
+              opacity: 0
+              }
+            .flex-wrap {
+              transition: transform .5s ease-in-out,box-shadow .5s ease-in-out;
+              transform: translateY(20px);
+              animation: 1s ease-in-out forwards slideUp;
+              animation-timeline: auto;
+              animation-range-start: normal;
+              animation-range-end: normal
+              }
+            .accordion-item svg,
+              .block:hover,
+                .rounded-2xl {
+                  transition-behavior: normal
+                  }
+                img {
+                  transition: transform .5s ease-in-out,opacity 1s ease-in-out;
+                  transform: scale(1.1);
+                  animation: 1.5s ease-in-out forwards fadeInZoom;
+                  animation-timeline: auto;
+                  animation-range-start: normal;
+                  animation-range-end: normal
+                  }
+                .product-card:hover img,
+                  .zoom-effect-container img:hover {
+                    transform: scale(1.2)
+                    }
+                  .text-green {
+                    color: #32cd32
+                    }
+                  
+                  .carousel {
+                    overflow-x: hidden;
+                    overflow-y: hidden;
+                    position: relative;
+                    width: 100%;
+                    height: 200px
+                    }
+                  .carousel-inner {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width: calc(200%);
+                    animation: 20s linear infinite scroll;
+                    animation-timeline: auto;
+                    animation-range-start: normal;
+                    animation-range-end: normal
+                    }
+                  .carousel-item {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    flex-basis: auto;
+                    width: 10%;
+                    height: 80%
+                    }
+                  .scroll-up {
+                    animation: .6s .2s forwards slideUp;
+                      animation-timeline: auto;
+                      animation-range-start: normal;
+                      animation-range-end: normal;
+                      opacity: 0;
+                      transform: translateY(50px)
+                      }
+                    .animate-slideInRight {
+                      animation: 1s ease-out forwards slideInRight;
+                      animation-timeline: auto;
+                      animation-range-start: normal;
+                      animation-range-end: normal
+                      }
+                    .h-160 {
+                      height: 40rem
+                      }
+                    .animate-fade-in-up {
+                      opacity: 0;
+                      animation: 2s ease-out forwards fadeInUp;
+                      animation-timeline: auto;
+                      animation-range-start: normal;
+                      animation-range-end: normal
+                      }
+                    .product-card:hover {
+                      transform: scale(1.05);
+                      box-shadow: rgba(0,0,0,.15) 0 10px 30px
+                      }
+                    .product-card:first-child {
+                      animation-delay: .2s
+                        }
+                      .product-card:nth-child(2) {
+                        animation-delay: .4s
+                          }
+                        .product-card:nth-child(3) {
+                          animation-delay: .6s
+                            }
+                          .product-card:nth-child(4) {
+                            animation-delay: .8s
+                              }
+                            .product-card:nth-child(5) {
+                              animation-delay: 1s
+                              }
+                            .product-card:nth-child(6) {
+                              animation-delay: 1.2s
+                              }
+                            .product-card:nth-child(7) {
+                              animation-delay: 1.4s
+                              }
+                            .product-card:nth-child(8) {
+                              animation-delay: 1.6s
+                              }
+                            .product-card:nth-child(9) {
+                              animation-delay: 1.8s
+                              }
+                            .accordion-item svg {
+                              transition: transform .3s
+                              }
+                            .block:hover {
+                              background-color: rgba(0,0,0,.05);
+                              transition: background-color .3s ease-in-out
+                              }
+                            .rounded-2xl {
+                              transition: transform .5s ease-in-out
+                              }
+                            h1.scroll-up {
+                              animation-delay: .1s
+                                }
+                              .grid {
+                                row-gap: 24px;
+                                column-gap: 24px
+                                }
+                              .sign-in-section {
+                                flex-grow: 1;
+                                flex-shrink: 1;
+                                flex-basis: 0%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end
+                                }
+                              .border-green {
+                                border-color: #00a500
+                                }
+                              .custom-line-height {
+                                line-height: 1.8
+                                }
+                              .accordion-item {
+                                border-bottom: 1px solid #e2e8f0
+                                }
+                              .accordion-item:last-child {
+                                border-bottom-width: initial;
+                                border-bottom-style: none;
+                                border-bottom-color: initial
+                                }
+                              .accordion-content.show {
+                                max-height: 1000px
+                                }
+                              .accordion-item.open svg {
+                                transform: rotate(180deg)
+                                }
+                              .container {
+                                animation: 1s ease-in-out fadeIn;
+                                animation-timeline: auto;
+                                animation-range-start: normal;
+                                animation-range-end: normal
+                                }
+                              .text-center {
+                                animation: 2s ease-in-out fadeIn;
+                                animation-timeline: auto;
+                                animation-range-start: normal;
+                                animation-range-end: normal
+                                }
+                              form {
+                                animation: 3s ease-in-out fadeIn;
+                                animation-timeline: auto;
+                                animation-range-start: normal;
+                                animation-range-end: normal
+                                }
+                              .flex:hover {
+                                transform: scale(1.015)
+                                }
+                              .rounded-2xl:hover {
+                                transform: scale(1.02)
+                                }
+                              @keyframes slideInFromLeft {
+                                0% {
+                                transform: translateX(-100%);
+                                opacity: 0
+                                }
+                              100% {
+                              transform: translateX(0);
+                              opacity: 1
+                              }
+                            }
+                          @keyframes slide-in {
+                            0% {
+                            transform: translateX(-100%);
+                            opacity: 0
+                            }
+                          100% {
+                          transform: translateX(0);
+                          opacity: 1
+                          }
+                        }
+                      @keyframes slideInRight {
+                        0% {
+                        transform: translateX(100%);
+                        opacity: 0
+                        }
+                      100% {
+                      transform: translateX(0);
+                      opacity: 1
+                      }
+                    }
+                  @keyframes fadeInUp {
+                    0% {
+                    opacity: 0;
+                    transform: translateY(20px)
+                    }
+                  100% {
+                  opacity: 1;
+                  transform: translateY(0)
+                  }
+                }
+              @keyframes slideInLeft {
+                0% {
+                transform: translateX(-100%);
+                opacity: 0
+                }
+              100% {
+              transform: translateX(0);
+              opacity: 1
+              }
+            }
+          @keyframes scroll {
+            0% {
+            transform: translateX(0)
+            }
+          100% {
+          transform: translateX(-50%)
+          }
+        }
+      @keyframes zoomOut {
+        0% {
+        transform: scale(1.2) translateX(-20px)
+        }
+      100% {
+      transform: scale(1) translateX(0)
+      }
+    }
+  @keyframes scrollUp {
+    0% {
+    transform: translateY(100%)
+    }
+  100% {
+  transform: translateY(0)
+  }
+}
+@keyframes slideUp {
+  100% {
+  opacity: 1;
+  transform: translateY(0)
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+  transform: translateY(0) scale(1)
+  }
+50% {
+transform: translateY(-10px) scale(1.05)
+}
+}
+@keyframes fadeIn {
+  0% {
+  opacity: 0
+  }
+100% {
+opacity: 1
+}
+}
+@keyframes slideUp {
+  0% {
+  transform: translateY(20px);
+  opacity: 0
+  }
+100% {
+transform: translateY(0);
+opacity: 1
+}
+}
+@keyframes fadeInZoom {
+  0% {
+  opacity: 0;
+  transform: scale(1.1)
+  }
+100% {
+opacity: 1;
+transform: scale(1)
+}
+}
+
